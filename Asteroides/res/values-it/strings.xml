@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Asteroidi</string>
+    <!-- Actividades -->
+    <string name="activity_about">Circa…</string>
+    <string name="activity_preferences">Configurazione</string>
+    <string name="activity_rating">Posizione</string>
+    <!-- Menu -->
+    <string name="menu_play">Giocare</string>
+    <string name="menu_config">Configurazione</string>
+    <string name="menu_about">Circa</string>
+    <string name="menu_exit">Uscire</string>
+    <string name="menu_rating">Posizione</string>
+    <!-- Otros -->
+    <string name="textRatingEmpty">Nessun punteggio</string>
+    <string name="about_text">Questo programma è stato sviluppato come un esempio, nel corso di Android per illustrare come avviare nuove attività dalla principale attività.</string>
+    <string name="title_activity_puntuaciones">Posizione</string>
+
+</resources>

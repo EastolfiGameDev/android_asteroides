@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="40dip"
+    android:paddingRight="40dip"
+    android:paddingTop="80dip"
+    tools:context=".Asteroides" >
+
+    <TextView
+        style="@style/EstiloAsteroides"
+        android:layout_marginBottom="15dip"
+        android:gravity="center"
+        android:text="@string/app_name" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnPlay"
+                style="@style/EstiloAsteroides.Botones"
+                android:text="@string/menu_play" />
+
+            <Button
+                android:id="@+id/btnAbout"
+                style="@style/EstiloAsteroides.Botones"
+                android:text="@string/menu_about" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnConfig"
+                style="@style/EstiloAsteroides.Botones"
+                android:text="@string/menu_config" />
+
+            <Button
+                android:id="@+id/btnRating"
+                style="@style/EstiloAsteroides.Botones"
+                android:text="@string/menu_rating" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnExit"
+                style="@style/EstiloAsteroides.Botones"
+                android:text="@string/menu_exit" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

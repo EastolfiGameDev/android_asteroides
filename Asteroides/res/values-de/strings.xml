@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Asteroids</string>
+    <!-- Actividades -->
+    <string name="activity_about">Über…</string>
+    <string name="activity_preferences">Konfiguration</string>
+    <string name="activity_rating">Wertung</string>
+    <!-- Menu -->
+    <string name="menu_play">Spielen</string>
+    <string name="menu_config">Konfiguration</string>
+    <string name="menu_about">Über</string>
+    <string name="menu_exit">Verlassen</string>
+    <string name="menu_rating">Wertung</string>
+    <!-- Otros -->
+    <string name="textRatingEmpty">Derzeit keine Punktzahl</string>
+    <string name="about_text">Dieses Programm ist als Beispiel im Android natürlich zu zeigen, wie neue Aktivitäten aus der Haupttätigkeit zu starten entwickelt worden.</string>
+    <string name="title_activity_puntuaciones">Wertung</string>
+
+</resources>

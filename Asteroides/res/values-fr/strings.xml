@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Astéroïdes</string>
+    <!-- Actividades -->
+    <string name="activity_about">About…</string>
+    <string name="activity_preferences">Configuration</string>
+    <string name="activity_rating">Scores</string>
+    <!-- Menu -->
+    <string name="menu_play">Jouer</string>
+    <string name="menu_config">Configuration</string>
+    <string name="menu_about">Sur</string>
+    <string name="menu_exit">Sortie</string>
+    <string name="menu_rating">Classement</string>
+    <!-- Otros -->
+    <string name="textRatingEmpty">Aucuns points</string>
+    <string name="about_text">Ce programme a été développé comme un exemple dans le cadre Android pour montrer comment lancer de nouvelles activités à partir de l\'activité principale.</string>
+    <string name="title_activity_puntuaciones">Classement</string>
+
+</resources>

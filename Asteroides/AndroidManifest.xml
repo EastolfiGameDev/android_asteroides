@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.edu.android.asteroides"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="es.edu.android.asteroides.activities.Asteroides"
+            android:label="@string/app_name"
+            android:theme="@style/TemaAsteroides" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="es.edu.android.asteroides.activities.AcercaDe"
+            android:label="@string/activity_about"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="es.edu.android.asteroides.activities.Preferencias"
+            android:label="@string/activity_preferences"
+            android:theme="@style/TemaAsteroides" >
+        </activity>
+        <activity
+            android:name="es.edu.android.asteroides.activities.Puntuaciones"
+            android:label="@string/title_activity_puntuaciones"
+            android:theme="@style/TemaAsteroides" >
+        </activity>
+    </application>
+
+</manifest>

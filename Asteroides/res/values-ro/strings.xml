@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Asteroizi</string>
+    <!-- Actividades -->
+    <string name="activity_about">Despre…</string>
+    <string name="activity_preferences">Configuratie</string>
+    <string name="activity_rating">Rezultate</string>
+    <!-- Menu -->
+    <string name="menu_play">Juca</string>
+    <string name="menu_config">Configuratie</string>
+    <string name="menu_about">Despre</string>
+    <string name="menu_rating">Rezultate</string>
+    <string name="menu_exit">Lesire</string>
+    <!-- Otros -->
+    <string name="textRatingEmpty">Niciun rezultat.</string>
+    <string name="about_text">Acest program a fost dezvoltat ca un exemplu în cursul Android pentru a demonstra cum de a lansa noi activități de domeniul principal de activitate.</string>
+    <string name="title_activity_puntuaciones">Rezultate</string>
+
+</resources>
