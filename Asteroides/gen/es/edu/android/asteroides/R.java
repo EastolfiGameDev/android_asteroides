@@ -18,7 +18,14 @@ public final class R {
         public static final int asteroide1=0x7f020000;
         public static final int asteroide2=0x7f020001;
         public static final int asteroide3=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
+        public static final int background=0x7f020003;
+        public static final int background_preferences=0x7f020004;
+        public static final int fondo=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int pref1=0x7f020007;
+        public static final int pref2=0x7f020008;
+        public static final int pref3=0x7f020009;
+        public static final int pref4=0x7f02000a;
     }
     public static final class id {
         public static final int btnAbout=0x7f090006;
@@ -104,15 +111,20 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050004;
+        public static final int AppBaseTheme=0x7f050007;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050005;
+        public static final int AppTheme=0x7f050008;
+        /**          <item name="android:background">@drawable/background</item> 
+         */
         public static final int EstiloAsteroides=0x7f050000;
-        public static final int EstiloAsteroides_Botones=0x7f050001;
-        public static final int EstiloAsteroides_Tablet=0x7f050002;
-        public static final int TemaAsteroides=0x7f050003;
+        public static final int EstiloAsteroides_Botones=0x7f050002;
+        public static final int EstiloAsteroides_Tablet=0x7f050003;
+        public static final int EstiloAsteroides_Text=0x7f050001;
+        public static final int TemaAbout=0x7f050004;
+        public static final int TemaAsteroides=0x7f050005;
+        public static final int TemaPreferencias=0x7f050006;
     }
     public static final class xml {
         public static final int preferencias=0x7f040000;

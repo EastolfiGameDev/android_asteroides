@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="TemaPreferencias" parent="@android:style/Theme.Black.NoTitleBar">
+
+        <!-- Override properties according to your need -->
+        <item name="android:windowBackground">@drawable/background_preferences</item>
+        <item name="android:textColorPrimary">#ff0000</item>
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

@@ -26,12 +26,12 @@
         <activity
             android:name="es.edu.android.asteroides.activities.AcercaDe"
             android:label="@string/activity_about"
-            android:theme="@android:style/Theme.Dialog" >
+            android:theme="@style/TemaAbout" >
         </activity>
         <activity
             android:name="es.edu.android.asteroides.activities.Preferencias"
             android:label="@string/activity_preferences"
-            android:theme="@style/TemaAsteroides" >
+            android:theme="@style/TemaPreferencias" >
         </activity>
         <activity
             android:name="es.edu.android.asteroides.activities.Puntuaciones"
