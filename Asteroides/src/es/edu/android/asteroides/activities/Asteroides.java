@@ -19,7 +19,7 @@ import es.edu.android.asteroides.interfaces.AlmacenPuntuaciones;
  */
 public class Asteroides extends Activity {
 	public static AlmacenPuntuaciones almacen = new AlmacenPuntuacionesArray();
-	Button btnAbout, btnSettings, btnRating, btnExit;
+	Button btnPlay, btnAbout, btnSettings, btnRating, btnExit;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,14 @@ public class Asteroides extends Activity {
 		/* Eventos movidos del layout a codigo para simplificarlo 
 		 * al usar distintas pantallas (-land, -xlarge, ...) 
 		 */
+		btnPlay = (Button) findViewById(R.id.btnPlay);
+		btnPlay.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				lanzarJuego(v);
+			}
+		});
+		
 		btnAbout = (Button) findViewById(R.id.btnAbout);
 		btnAbout.setOnClickListener(new OnClickListener() {
 			@Override
@@ -81,6 +89,11 @@ public class Asteroides extends Activity {
 			break;
 		}
 		return true;
+	}
+	
+	public void lanzarJuego(View view) {
+		Intent i = new Intent(this, Juego.class);
+		startActivity(i);
 	}
 	
 	public void lanzarAcercaDe(View view) {

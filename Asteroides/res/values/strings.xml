@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Asteroides</string>
+
+    <string name="app_name">Asteroides</string>
     <!-- Actividades -->
     <string name="activity_about">Acerca de…</string>
     <string name="activity_preferences">Preferencias</string>
@@ -15,5 +16,8 @@
     <string name="textRatingEmpty">No hay puntuaciones</string>
     <string name="about_text">Este programa ha sido desarrollado como ejemplo en el curso de Android para demostrar cómo se pueden lanzar nuevas actividades desde la actividad principal.</string>
     <string name="title_activity_puntuaciones">Puntuaciones</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_juego">Juego</string>
 
 </resources>

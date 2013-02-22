@@ -38,6 +38,12 @@
             android:label="@string/title_activity_puntuaciones"
             android:theme="@style/TemaAsteroides" >
         </activity>
+        <activity
+            android:name="es.edu.android.asteroides.activities.Juego"
+            android:label="@string/title_activity_juego"
+            android:screenOrientation="landscape"
+            android:theme="@style/TemaAsteroides" >
+        </activity>
     </application>
 
 </manifest>
