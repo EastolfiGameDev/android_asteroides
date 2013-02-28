@@ -13,12 +13,15 @@ public class Grafico {
 	private int radioColision; // Para determinar colisión
 	// Donde dibujamos el gráfico (usada en view.ivalidate)
 	private View view;
-	// Para determinar el espacio a borrar (view.ivalidate)
+	// Para determinar el espacio a borrar (view.invalidate)
 	public static final int MAX_VELOCIDAD = 20;
 	
 	public Grafico(View view, Drawable drawable) {
+		//Guardamos la vista del juego
 		this.view = view;
+		//Guardamos la vista de la nave/asteroide/misil
 		this.drawable = drawable;
+		//Guardamos el alto, ancho y radio de colision del objeto
 		this.ancho = drawable.getIntrinsicWidth();
 		this.alto = drawable.getIntrinsicHeight();
 		this.radioColision = (alto+ancho)/4;
@@ -43,13 +46,21 @@ public class Grafico {
 	public void incrementaPos(double factor) {
 		posX += incX * factor;
 		// Si salimos de la pantalla, corregimos posición
-		if (posX < -ancho/2) posX = view.getWidth() - ancho/2;
-		if (posX > view.getWidth() - ancho/2) posX = -ancho/2;
+		if (posX < -ancho/2) {
+			posX = view.getWidth() - ancho/2;
+		}
+		if (posX > view.getWidth() - ancho/2) {
+			posX = -ancho/2;
+		}
 		
 		posY += incY * factor;
 		// Si salimos de la pantalla, corregimos posición
-        if(posY < -alto/2) posY = view.getHeight() - alto/2;
-        if(posY > view.getHeight() - alto/2) posY = -alto/2;
+        if(posY < -alto/2) {
+        	posY = view.getHeight() - alto/2;
+        }
+        if(posY > view.getHeight() - alto/2) {
+        	posY = -alto/2;
+        }
         
         angulo += rotacion * factor;
 	}
