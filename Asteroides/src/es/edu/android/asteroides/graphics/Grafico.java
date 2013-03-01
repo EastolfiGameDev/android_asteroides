@@ -30,8 +30,8 @@ public class Grafico {
 	public void dibujaGrafico(Canvas canvas) {
 		canvas.save();
 		
-		int x = (int) ((posX+ancho)/2);
-		int y = (int) ((posY+alto)/2);
+		int x = (int) (posX+ancho/2);
+		int y = (int) (posY+alto/2);
 		
 		canvas.rotate((float)rotacion, (float)x, (float)y);
 		drawable.setBounds((int)posX, (int)posY, (int)posX+ancho, (int)posY+alto);
