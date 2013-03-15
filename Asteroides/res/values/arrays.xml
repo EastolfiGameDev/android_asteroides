@@ -7,9 +7,20 @@
         <item>3D</item>
     </string-array>
     <string-array name="graficosValue">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+        <item>vectorial</item>
+        <item>bitmap</item>
+        <item>3d</item>
+    </string-array>
+    
+    <string-array name="controlTitle">
+        <item>Táctil</item>
+        <item>Sensores</item>
+        <item>Joystick</item>
+    </string-array>
+    <string-array name="controlValue">
+        <item>tactil</item>
+        <item>sensor</item>
+        <item>joystick</item>
     </string-array>
 
 </resources>

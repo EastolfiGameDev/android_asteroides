@@ -14,6 +14,14 @@
         android:key="graficos"
         android:summary="Se escoge la representación de gráficos"
         android:title="Tipo de gráficos" />
+    
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/controlTitle"
+        android:entryValues="@array/controlValue"
+        android:key="controles"
+        android:summary="Se escoge los controles del juego"
+        android:title="Tipo de control" />
 
     <EditTextPreference
         android:defaultValue="3"

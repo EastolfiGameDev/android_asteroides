@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Vector;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint.Style;
@@ -14,9 +15,12 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.preference.PreferenceManager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 import es.edu.android.asteroides.R;
 
 /**
@@ -25,6 +29,7 @@ import es.edu.android.asteroides.R;
  * @author e.astolfi
  */
 public class VistaJuego extends View implements SensorEventListener {
+	Context mContext;
 	/********* ASTEROIDES **********/
     private Vector<Grafico> Asteroides; // Vector con los Asteroides
     private int numAsteroides= 5; // Número inicial de asteroides
@@ -35,6 +40,7 @@ public class VistaJuego extends View implements SensorEventListener {
     private float aceleracionNave; // aumento de velocidad
     private float mX = 0, mY = 0;
     private boolean disparo = false;
+    private SensorManager mSensorManager;
     // Incremento estándar de giro y aceleración
     private static final int PASO_GIRO_NAVE = 5;
     private static final float PASO_ACELERACION_NAVE = 0.5f;
@@ -47,23 +53,23 @@ public class VistaJuego extends View implements SensorEventListener {
     // Thread encargado de procesar el juego
     private ThreadJuego thread = new ThreadJuego();
     // Cada cuanto queremos procesar cambios (ms)
-    private static int PERIODO_PROCESO = 50;
+    private static int PERIODO_PROCESO = 40;
     // Cuando se realizó el último proceso
     private long ultimoProceso = 0;
     
     /**
      * Inicializamos cada objeto y vista que necesitaremos luego
      */
+	@SuppressWarnings("deprecation")
 	public VistaJuego(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		mContext = context;
+//		SharedPreferences prefManager = PreferenceManager.getDefaultSharedPreferences(getContext());
+//		String controles = prefManager.getString("controles", "tactil");
 		
-		SensorManager mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
-		List<Sensor> sensorList = mSensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
-		if (!sensorList.isEmpty()) {
-			Sensor orientationSensor = sensorList.get(0);
-			mSensorManager.registerListener(this, orientationSensor, SensorManager.SENSOR_DELAY_GAME);
+//		if (controles.compareTo("sensor") == 0) {
 			
-		}
+//		}
 		
 		//Creamos la nave, asteroides y misiles a partir de un Drawable
 		Drawable drawableNave, drawableAsteroide, drawableMisil;
@@ -121,32 +127,39 @@ public class VistaJuego extends View implements SensorEventListener {
 	public boolean onTouchEvent (MotionEvent event) {
 		super.onTouchEvent(event);
 		
+		//Recojo las coordenadas del dedo
 		float x = event.getX();
 		float y = event.getY();
 		
 		switch (event.getAction()) {
-		case MotionEvent.ACTION_DOWN:
-			disparo = true;
-			break;
-		case MotionEvent.ACTION_MOVE:
-			float dX = Math.abs(x - mX);
-			float dY = Math.abs(y - mY);
-			if (dY < 3 && dX > 3) {
-				giroNave = Math.round((x - mX) / 5);
-				disparo = false;
-			}
-			else if (dX < 3 && dY > 3) {
-				aceleracionNave = Math.round((mY - y) / 30);
-				disparo = false;
-			}
-			break;
-		case MotionEvent.ACTION_UP:
-			giroNave = 0;
-			aceleracionNave = 0;
-			if (disparo) {
-				ActivaMisil();
-			}
-			break;
+			//Al pulsar, suponemos que se va a disparar
+			case MotionEvent.ACTION_DOWN:
+				disparo = true;
+				break;
+			//Al mover, se ajusta el angulo y aceleracion, y cancelamos el disparo
+			case MotionEvent.ACTION_MOVE:
+				Log.d("Debug", "Move_Event");
+				//Obtenemos la distancia recorrida por el dedo en cada eje
+				float dX = Math.abs(x - mX);
+				float dY = Math.abs(y - mY);
+				
+				if (dY < 25 && dX > 25) {
+					giroNave = Math.round((x - mX) / 5);
+	//				nave.setAngulo(nave.getAngulo() + giroNave);
+					disparo = false;
+				}
+				else if (dX < 25 && dY > 25) {
+					if (mY >= y) aceleracionNave = Math.round((mY - y) / 35);
+					disparo = false;
+				}
+				break;
+			case MotionEvent.ACTION_UP:
+				giroNave = 0;
+				aceleracionNave = 0;
+				if (disparo) {
+					ActivaMisil();
+				}
+				break;
 		}
 		mX = x;
 		mY = y; 
@@ -207,11 +220,18 @@ public class VistaJuego extends View implements SensorEventListener {
 		ultimoProceso = ahora;	// Para la próxima vez
 		// Actualizamos velocidad y dirección de la nave a partir de 
 		// giroNave y aceleracionNave (según la entrada del jugador)
+		if (giroNave != 0) {
+//			Log.d("Giro Nave", String.valueOf(giroNave));
+		}
 		nave.setAngulo((int) (nave.getAngulo() + giroNave * retardo));
 		double nIncX = nave.getIncX() + aceleracionNave *
 					Math.cos(Math.toRadians(nave.getAngulo())) * retardo;
 		double nIncY = nave.getIncY() + aceleracionNave *
 					Math.sin(Math.toRadians(nave.getAngulo())) * retardo;
+//		nIncX = Math.sqrt(Math.pow(nIncX, 2) + Math.pow(nIncY, 2))
+//	                * Math.cos(Math.toRadians(nave.getAngulo()));
+//        nIncY = Math.sqrt(Math.pow(nIncX, 2) + Math.pow(nIncY, 2))
+//                	* Math.sin(Math.toRadians(nave.getAngulo()));
 		// Actualizamos si el módulo de la velocidad no excede el máximo
 		if (Math.hypot(nIncX, nIncY) <= Grafico.MAX_VELOCIDAD) {
 			nave.setIncX(nIncX);
@@ -259,15 +279,56 @@ public class VistaJuego extends View implements SensorEventListener {
 		misilActivo = true;
 	}
 	
-	class ThreadJuego extends Thread {
+	public class ThreadJuego extends Thread {
+		private boolean paused, running;
 		@Override
 		public void run() {
-			while (true) {
+			running = true;
+			while (running) {
 				actualizaFisica();
+				synchronized (this) {
+					while (paused) {
+						try {
+							wait();
+						} catch (Exception e) {}
+					}
+				}
+//				try {
+//					Thread.sleep(PERIODO_PROCESO);
+//				}
+//				catch (InterruptedException e) {
+//					Thread.currentThread().interrupt();
+//				}
 			}
+		}
+		public synchronized void pausar() {
+			paused = true;
+		}
+		public synchronized void reanudar() {
+			paused = false;
+			notify();
+		}
+		public void parar() {
+			running = false;
+			if (paused) reanudar();
 		}
 	}
 
+	public ThreadJuego getThread() {
+		return thread;
+	}
 
+	public SensorManager getmSensorManager() {
+		return mSensorManager;
+	}
+	
+	public void setmSensorManager() {//TODO optimizar
+		mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
+		List<Sensor> sensorList = mSensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
+		if (!sensorList.isEmpty()) {
+			Sensor orientationSensor = sensorList.get(0);
+			mSensorManager.registerListener(this, orientationSensor, SensorManager.SENSOR_DELAY_GAME);
+		}
+	}
 
 }
