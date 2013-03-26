@@ -1,4 +1,4 @@
-package es.edu.android.asteroides.adapter;
+package es.edu.android.asteroides.helpers;
 
 import java.util.Vector;
 

@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 import es.edu.android.asteroides.R;
-import es.edu.android.asteroides.adapter.MyAdapter;
+import es.edu.android.asteroides.helpers.MyAdapter;
 
 /**
  * Actividad representativa de la pantalla de puntuaciones

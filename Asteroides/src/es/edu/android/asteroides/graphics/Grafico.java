@@ -2,7 +2,6 @@ package es.edu.android.asteroides.graphics;
 
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.View;
 
 public class Grafico {
@@ -33,10 +32,8 @@ public class Grafico {
 		
 		int x = (int) (posX+ancho/2);
 		int y = (int) (posY+alto/2);
-		if (rotacion > 0) {
-//			Log.d("Rotacion", String.valueOf(rotacion));
-		}
-		canvas.rotate((float)rotacion, (float)x, (float)y);
+
+		canvas.rotate((float)angulo, (float)x, (float)y);
 		drawable.setBounds((int)posX, (int)posY, (int)posX+ancho, (int)posY+alto);
 		drawable.draw(canvas);
 		
