@@ -1,26 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="graficosTitle">
+    <string-array name="graficoTitle">
         <item>vectorial</item>
         <item>mapa de bits</item>
         <item>3D</item>
     </string-array>
-    <string-array name="graficosValue">
-        <item>vectorial</item>
-        <item>bitmap</item>
-        <item>3d</item>
+    <string-array name="graficoValue">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
     
     <string-array name="controlTitle">
         <item>Táctil</item>
-        <item>Sensores</item>
+        <item>Sensor Orientación</item>
+        <item>Acelerómetro</item>
         <item>Joystick</item>
     </string-array>
     <string-array name="controlValue">
-        <item>tactil</item>
-        <item>sensor</item>
-        <item>joystick</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <string-array name="languageTitle">
+        <item>Español</item>
+        <item>Inglés</item>
+        <item>Rumano</item>
+        <item>Italiano</item>
+        <item>Francés</item>
+        <item>Alemán</item>
+    </string-array>
+    <string-array name="languageValues">
+        <item>es</item>
+        <item>en</item>
+        <item>ro</item>
+        <item>it</item>
+        <item>fr</item>
+        <item>de</item>
     </string-array>
 
 </resources>

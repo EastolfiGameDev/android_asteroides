@@ -12,9 +12,19 @@
     <string name="menu_about">Über</string>
     <string name="menu_exit">Verlassen</string>
     <string name="menu_rating">Wertung</string>
+    <!-- Preferencias -->
+    <string name="pref_music_summary">Hintergrundmusik abspielen</string>
+    <string name="pref_music_title">Abspielen von Musik</string>
+    <string name="pref_graficos_summary">Wählen Sie die Grafik-Rendering</string>
+    <string name="pref_graficos_title">Art von Grafik</string>
+    <string name="pref_control_summary">Wählen Sie die Spielsteuerung</string>
+    <string name="pref_control_title">Steuerungsart</string>
+    <string name="pref_idioma_summary">Wählen Sie die Sprache</string>
+    <string name="pref_idioma_title">Sprache</string>
     <!-- Otros -->
     <string name="textRatingEmpty">Derzeit keine Punktzahl</string>
     <string name="about_text">Dieses Programm ist als Beispiel im Android natürlich zu zeigen, wie neue Aktivitäten aus der Haupttätigkeit zu starten entwickelt worden.</string>
     <string name="title_activity_puntuaciones">Wertung</string>
+    <string name="title_activity_juego">Spiel</string>
 
 </resources>

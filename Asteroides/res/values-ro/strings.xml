@@ -12,9 +12,19 @@
     <string name="menu_about">Despre</string>
     <string name="menu_rating">Rezultate</string>
     <string name="menu_exit">Lesire</string>
+    <!-- Preferencias -->
+    <string name="pref_music_summary">Redarea muzicii de fundal</string>
+    <string name="pref_music_title">Redarea muzicii</string>
+    <string name="pref_graficos_summary">Alege de redare grafică</string>
+    <string name="pref_graficos_title">Tipul de grafic</string>
+    <string name="pref_control_summary">Alege controalele de joc</string>
+    <string name="pref_control_title">Tipul de control</string>
+    <string name="pref_idioma_summary">Alegeti limba</string>
+    <string name="pref_idioma_title">Limbă</string>
     <!-- Otros -->
     <string name="textRatingEmpty">Niciun rezultat.</string>
     <string name="about_text">Acest program a fost dezvoltat ca un exemplu în cursul Android pentru a demonstra cum de a lansa noi activități de domeniul principal de activitate.</string>
     <string name="title_activity_puntuaciones">Rezultate</string>
+    <string name="title_activity_juego">Joc</string>
 
 </resources>

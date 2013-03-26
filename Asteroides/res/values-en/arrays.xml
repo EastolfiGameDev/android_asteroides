@@ -6,10 +6,19 @@
         <item>Bitmap</item>
         <item>3D</item>
     </string-array>
-    <string-array name="graficosValue">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+    <string-array name="controlTitle">
+        <item>Tactile</item>
+        <item>Orientation Sensor</item>
+        <item>Accelerometer</item>
+        <item>Joystick</item>
+    </string-array>
+    <string-array name="languageTitle">
+        <item>Spanish</item>
+        <item>English</item>
+        <item>Romanian</item>
+        <item>Italian</item>
+        <item>French</item>
+        <item>German</item>
     </string-array>
 
 </resources>

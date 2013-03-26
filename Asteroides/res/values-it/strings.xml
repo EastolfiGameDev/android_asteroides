@@ -12,9 +12,19 @@
     <string name="menu_about">Circa</string>
     <string name="menu_exit">Uscire</string>
     <string name="menu_rating">Posizione</string>
+    <!-- Preferencias -->
+    <string name="pref_music_summary">Ascolta musica di sottofondo</string>
+    <string name="pref_music_title">Riproduzione di musica</string>
+    <string name="pref_graficos_summary">Scegliere il rendering grafico</string>
+    <string name="pref_graficos_title">Tipo di grafico</string>
+    <string name="pref_control_summary">Scegliere i comandi di gioco</string>
+    <string name="pref_control_title">Tipo di controllo</string>
+    <string name="pref_idioma_summary">Scegli la lingua</string>
+    <string name="pref_idioma_title">Lingua</string>
     <!-- Otros -->
     <string name="textRatingEmpty">Nessun punteggio</string>
     <string name="about_text">Questo programma è stato sviluppato come un esempio, nel corso di Android per illustrare come avviare nuove attività dalla principale attività.</string>
     <string name="title_activity_puntuaciones">Posizione</string>
+    <string name="title_activity_juego">Gioco</string>
 
 </resources>

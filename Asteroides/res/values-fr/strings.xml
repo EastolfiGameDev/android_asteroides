@@ -12,9 +12,19 @@
     <string name="menu_about">Sur</string>
     <string name="menu_exit">Sortie</string>
     <string name="menu_rating">Classement</string>
+    <!-- Preferencias -->
+    <string name="pref_music_summary">Ecouter de la musique de fond</string>
+    <string name="pref_music_title">Ecouter de la musique</string>
+    <string name="pref_graficos_summary">Choisissez le rendu graphique</string>
+    <string name="pref_graficos_title">Type de graphique</string>
+    <string name="pref_control_summary">Choisissez les commandes du jeu</string>
+    <string name="pref_control_title">Type de contrôle</string>
+    <string name="pref_idioma_summary">Choisissez la langue</string>
+    <string name="pref_idioma_title">Langue</string>
     <!-- Otros -->
     <string name="textRatingEmpty">Aucuns points</string>
     <string name="about_text">Ce programme a été développé comme un exemple dans le cadre Android pour montrer comment lancer de nouvelles activités à partir de l\'activité principale.</string>
     <string name="title_activity_puntuaciones">Classement</string>
+    <string name="title_activity_juego">Jeu</string>
 
 </resources>

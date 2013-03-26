@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -10,6 +10,7 @@
     tools:context=".Asteroides" >
 
     <TextView
+        android:id="@+id/textView1"
         style="@style/EstiloAsteroides.Text"
         android:layout_marginBottom="15dip"
         android:gravity="center"
@@ -19,26 +20,45 @@
     <Button
         android:id="@+id/btnPlay"
         style="@style/EstiloAsteroides.Botones"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
         android:text="@string/menu_play" />
 
     <Button
         android:id="@+id/btnConfig"
         style="@style/EstiloAsteroides.Botones"
+        android:layout_alignLeft="@+id/btnPlay"
+        android:layout_below="@+id/btnPlay"
         android:text="@string/menu_config" />
 
     <Button
         android:id="@+id/btnAbout"
         style="@style/EstiloAsteroides.Botones"
+        android:layout_alignLeft="@+id/btnConfig"
+        android:layout_below="@+id/btnConfig"
         android:text="@string/menu_about" />
 
     <Button
         android:id="@+id/btnRating"
         style="@style/EstiloAsteroides.Botones"
+        android:layout_alignLeft="@+id/btnAbout"
+        android:layout_below="@+id/btnAbout"
         android:text="@string/menu_rating" />
 
     <Button
         android:id="@+id/btnExit"
         style="@style/EstiloAsteroides.Botones"
+        android:layout_alignLeft="@+id/btnRating"
+        android:layout_below="@+id/btnRating"
         android:text="@string/menu_exit" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/btnMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:contentDescription="@string/txt_btn_musica"
+        android:src="@drawable/btn_music_on" />
+
+</RelativeLayout>

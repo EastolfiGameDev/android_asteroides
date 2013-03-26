@@ -2,14 +2,23 @@
 <resources>
 
     <string-array name="graficosTitle">
-        <item>Vectorial</item>
-        <item>Bitmapdaten</item>
+        <item>Vektorielle</item>
+        <item>Bitmap</item>
         <item>3D</item>
     </string-array>
-    <string-array name="graficosValue">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+    <string-array name="controlTitle">
+        <item>Taktil</item>
+        <item>Lagesensor</item>
+        <item>Accelerometer</item>
+        <item>Joystick</item>
+    </string-array>
+    <string-array name="languageTitle">
+        <item>Spanisch</item>
+        <item>Englisch</item>
+        <item>Rumänisch</item>
+        <item>Italienisch</item>
+        <item>Französisch</item>
+        <item>Deutch</item>
     </string-array>
 
 </resources>

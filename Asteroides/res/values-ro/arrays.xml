@@ -6,10 +6,19 @@
         <item>Bit hartă</item>
         <item>3D</item>
     </string-array>
-    <string-array name="graficosValue">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+    <string-array name="controlTitle">
+        <item>Tactil</item>
+        <item>Senzor de orientare</item>
+        <item>Accelerometru</item>
+        <item>Joystick</item>
+    </string-array>
+    <string-array name="languageTitle">
+        <item>Spaniol</item>
+        <item>Englez</item>
+        <item>Român</item>
+        <item>Italian</item>
+        <item>Franceză</item>
+        <item>German</item>
     </string-array>
 
 </resources>

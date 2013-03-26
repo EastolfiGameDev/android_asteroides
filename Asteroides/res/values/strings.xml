@@ -12,12 +12,20 @@
     <string name="menu_about">Acerca de</string>
     <string name="menu_exit">Salir</string>
     <string name="menu_rating">Puntuaciones</string>
+    <!-- Preferencias -->
+    <string name="pref_music_summary">Se reproduce música de fondo</string>
+    <string name="pref_music_title">Reproducir música</string>
+    <string name="pref_graficos_summary">Se escoge la representación de gráficos</string>
+    <string name="pref_graficos_title">Tipo de gráficos</string>
+    <string name="pref_control_summary">Se escoge los controles del juego</string>
+    <string name="pref_control_title">Tipo de control</string>
+    <string name="pref_idioma_summary">Se escoge el idioma</string>
+    <string name="pref_idioma_title">Idioma</string>
     <!-- Otros -->
     <string name="textRatingEmpty">No hay puntuaciones</string>
     <string name="about_text">Este programa ha sido desarrollado como ejemplo en el curso de Android para demostrar cómo se pueden lanzar nuevas actividades desde la actividad principal.</string>
     <string name="title_activity_puntuaciones">Puntuaciones</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
     <string name="title_activity_juego">Juego</string>
+    <string name="txt_btn_musica">Musica</string>
 
 </resources>

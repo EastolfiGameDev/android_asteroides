@@ -6,10 +6,19 @@
         <item>Bit mappa</item>
         <item>3D</item>
     </string-array>
-    <string-array name="graficosValue">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+    <string-array name="controlTitle">
+        <item>Tattile</item>
+        <item>Sensore di orientamento</item>
+        <item>Accelerometro</item>
+        <item>Joystick</item>
+    </string-array>
+    <string-array name="languageTitle">
+        <item>Spagnolo</item>
+        <item>Inglese</item>
+        <item>Rumeno</item>
+        <item>Italiano</item>
+        <item>Francese</item>
+        <item>Tedesco</item>
     </string-array>
 
 </resources>
